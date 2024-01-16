@@ -1,13 +1,8 @@
-
 public class CreditCard {
-	
-	
-	
 	private String idnum;
 	private Money Balance;
 	
 	public CreditCard( String i) {
-		
 		this.idnum = i;
 		this.Balance = new Money("$0.00");
 	}
@@ -16,6 +11,7 @@ public class CreditCard {
 		this.idnum = "000";
 		this.Balance = new Money("$0.00");
 	}
+	
 	public String getIDnum() {
 		return this.idnum;	
 	}
@@ -28,15 +24,11 @@ public class CreditCard {
 		this.Balance = payamt;
 	}
 	
-	
 	public boolean payCard(Money payamt) {
 		if( this.Balance.compareMoney( payamt) == 0 || this.Balance.compareMoney( payamt) == 1) {
-			
 			this.setBalance(this.Balance.subtractMoney(payamt));
 			return true;
-			}
-		else {
-			
+		} else {
 			return false;
 		}
 	}
