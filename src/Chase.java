@@ -10,7 +10,7 @@ public class Chase extends CreditCard{
 		super();
 		this.servicefee = new Money("$15.00");	
 	}
-	
+
 	public Money getServiceFee() {
 		return this.servicefee;
 	}
